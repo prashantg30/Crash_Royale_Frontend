@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../../betDetails.css";
-import { socket } from "../../../../utils/socket/socketService";
 import InputContainer from "../../inputContainer/InputContainer";
 import ChipSelectbutton from "../../chipSelect/ChipSelectbutton";
 import AutoCashout from "../../autocashout/AutoCashout";
@@ -9,30 +8,39 @@ import InputContainerMobile from "../../inputContainer/InputContainerMobile";
 import InsuranceMobile from "../../chipSelect/InsuranceMobile";
 import AutoCashoutMobile from "../../autocashout/AutoCashOutMobile";
 import BetButtonMobile from "../../betButton/BetButtonMobile";
-import CashoutModal from "./CashoutModal";
+
 const Classic = ({
   info,
   handlePlaceBet,
   amount,
-  autoCash,setAutoCash,
+  autoCash,
+  setAutoCash,
   handleCashout,
   setAmount,
   planeStatus,
   disableButton,
   autoCashToggle,
-  handleCancelBet,handleNextClick,
-  showCancel,cashoutShow,
+  handleCancelBet,
+  handleNextClick,
+  showCancel,
+  cashoutShow,
   autoMultiplier,
   setAutoMultiplier,
   nextRound,
   endDelay,
   amountMultiplier,
-  betData,cashoutData,
+  betData,
+  cashoutData,
 }) => {
+  // Ensure autoMultiplier is handled safely
+  const isAutoMultiplierEmpty = !autoMultiplier || autoMultiplier === "";
+
+  // Combine disableButton logic to include isAutoMultiplierEmpty
+  const isButtonDisabled = disableButton || isAutoMultiplierEmpty;
 
   return (
     <>
-   
+      {/* Desktop Version */}
       <div className="place-bet-content">
         <InputContainer
           amount={amount}
@@ -44,16 +52,17 @@ const Classic = ({
           endDelay={endDelay}
           planeStatus={planeStatus}
           showCancel={showCancel}
-          disableButton={disableButton}
+          disableButton={isButtonDisabled}
         />
         <ChipSelectbutton
           amount={amount}
           setAmount={setAmount}
+          autoMultiplier={autoMultiplier}
           info={info}
           betData={betData}
           nextRound={nextRound}
           planeStatus={planeStatus}
-          disableButton={disableButton}
+          disableButton={isButtonDisabled}
         />
         <BetButton
           planeStatus={planeStatus}
@@ -69,6 +78,8 @@ const Classic = ({
           showCancel={showCancel}
           amount={amount}
           amountMultiplier={amountMultiplier}
+          disableButton={isButtonDisabled}
+          className={isButtonDisabled ? 'disabled-button' : ''}
         />
         <AutoCashout
           autoCashToggle={autoCashToggle}
@@ -78,9 +89,10 @@ const Classic = ({
           setAutoMultiplier={setAutoMultiplier}
         />
       </div>
-      <div className="place-bet-content-mobile">
 
-        <div className="" style={{ width: "28%" }}>
+      {/* Mobile Version */}
+      <div className="place-bet-content-mobile">
+        <div style={{ width: "28%" }}>
           <InputContainerMobile
             amount={amount}
             setAmount={setAmount}
@@ -91,12 +103,13 @@ const Classic = ({
             endDelay={endDelay}
             planeStatus={planeStatus}
             showCancel={showCancel}
+            disableButton={isButtonDisabled}
           />
         </div>
-        <div className="" >
+        <div>
           <InsuranceMobile />
         </div>
-        <div className="" style={{ width: "32%" }}>
+        <div style={{ width: "32%" }}>
           <AutoCashoutMobile
             autoCashToggle={autoCashToggle}
             autoCash={autoCash}
@@ -105,7 +118,7 @@ const Classic = ({
             setAutoMultiplier={setAutoMultiplier}
           />
         </div>
-        <div className="" style={{ width: "40%" }}>
+        <div style={{ width: "40%" }}>
           <BetButtonMobile
             planeStatus={planeStatus}
             handleCancelBet={handleCancelBet}
@@ -120,6 +133,8 @@ const Classic = ({
             showCancel={showCancel}
             amount={amount}
             amountMultiplier={amountMultiplier}
+            disableButton={isButtonDisabled}
+            className={isButtonDisabled ? 'disabled-button' : ''}
           />
         </div>
       </div>

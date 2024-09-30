@@ -149,7 +149,7 @@ const BetDetails = ({ info, planeData, amount, setAmount, queryParams }) => {
         }
     }, [planeStatus])
 
-   
+
 
     useEffect(() => {
         let timer;
@@ -203,7 +203,7 @@ const BetDetails = ({ info, planeData, amount, setAmount, queryParams }) => {
             console.log(data, "hello")
             try {
                 setBetData(data);
-             
+
             } catch (err) {
                 console.error(err);
             }
@@ -350,6 +350,7 @@ const BetDetails = ({ info, planeData, amount, setAmount, queryParams }) => {
                         handlePlaceBet={handlePlaceBet}
                         setAmount={setAmount}
                         info={info} />)
+
                 }
                 {
                     activeTab === 2 && (<Range info={info}
@@ -370,7 +371,6 @@ const BetDetails = ({ info, planeData, amount, setAmount, queryParams }) => {
                         handleNextClick={handleNextClick}
                         handlePlaceBet={handlePlaceBet}
                         endDelay={endDelay}
-
                         amount={amount}
                         setAmount={setAmount}
                     />)

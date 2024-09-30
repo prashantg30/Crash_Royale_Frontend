@@ -9,7 +9,7 @@ const AutoCashout = ({
   setAutoMultiplier,
 }) => {
   useEffect(() => {
-    setAutoMultiplier("2.00"); // Initial value set ki gayi
+    setAutoMultiplier("2.00"); 
   }, [setAutoMultiplier]);
 
   const handleIncrease = () => {
@@ -31,7 +31,7 @@ const AutoCashout = ({
         decimalPart += 1;
       }
 
-      return `${integerPart}.${decimalPart.toString().padStart(1, "0")}`;
+      return `${integerPart}.${decimalPart.toString().padStart(2, "0")}`;
     });
   };
 
@@ -199,7 +199,7 @@ const AutoCashout = ({
               height: "9px",
               top: "-2px",
               right: "-3px",
-              barderRadius: "15px",
+              borderRadius: "15px",
             }}
           >
             <div

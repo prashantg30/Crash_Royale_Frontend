@@ -9,6 +9,7 @@ const ChipSelectbutton = ({
   planeStatus,
   nextRound,
   betData,
+  autoMultiplier,
   disableButton
 }) => {
   const [lastClickedValue, setLastClickedValue] = useState(null);
@@ -91,7 +92,7 @@ const ChipSelectbutton = ({
           disabled={
             (planeStatus === "0" && betData?.length > 0) ||
             (planeStatus === "1" && betData?.length > 0) ||
-            nextRound[0]
+            nextRound[0] || (autoMultiplier == 0 || isNaN(autoMultiplier))
           }
           key={i}
           className="btn-tab"

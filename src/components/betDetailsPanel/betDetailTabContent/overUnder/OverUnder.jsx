@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from "react";
-
 import "../../betDetails.css";
-import { betAmountValue } from "../../../../utils/StaticData";
 import InputContainer from "../../inputContainer/InputContainer";
 import ChipSelectbutton from "../../chipSelect/ChipSelectbutton";
-import AutoCashout from "../../autocashout/AutoCashout";
-import { socket } from "../../../../utils/socket/socketService";
 import CrashPoint from "./CrashPoint";
 import OverUnderBetButton from "./OverUnderBetButton";
-import PlayerDetails from "../../player/PlayerDetails";
-import { calcOverunder, calculateRange } from "../../../../utils/calculator";
 import InputContainerMobile from "../../inputContainer/InputContainerMobile";
-import AutoCashoutMobile from "../../autocashout/AutoCashOutMobile";
 import CrashPointMobile from "./CrashPointMobile";
 import InsuranceMobile from "../../chipSelect/InsuranceMobile";
 import OverUnderBetButtonMobile from "./OverUnderBetButtonMobile";
@@ -72,7 +65,7 @@ const OverUnder = ({
           planeStatus={planeStatus}
           endDelay={endDelay}
           cashoutData={cashoutData}
-          
+          disableButton={disableButton}
           handleCashout={handleCashout}
           cashoutShow={cashoutShow}
           handleNextClick={handleNextClick}

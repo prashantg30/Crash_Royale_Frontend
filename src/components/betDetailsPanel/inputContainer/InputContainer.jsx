@@ -87,11 +87,11 @@ const InputContainer = ({
         <button
           className="mix-max-text"
           onClick={handleMinAmount}
-          disabled={disableButton || +amount === MIN_AMOUNT}
-          style={{
-            opacity: disableButton || +amount === MIN_AMOUNT ? "0.5" : "",
-            cursor: disableButton || +amount === MIN_AMOUNT ? "default" : "",
-          }}
+          // disabled={disableButton || +amount === MIN_AMOUNT}
+          // style={{
+          //   opacity: disableButton || +amount === MIN_AMOUNT ? "0.5" : "",
+          //   cursor: disableButton || +amount === MIN_AMOUNT ? "default" : "",
+          // }}
         >
           Min
         </button>
@@ -99,7 +99,7 @@ const InputContainer = ({
         <div className="btn-container">
           <button
             className="mix-max-text"
-            disabled={disableButton || (+amount > 1 && +amount < 2)}
+            // disabled={disableButton || (+amount > 1 && +amount < 2)}
             type="button"
             onClick={handlehalfDecrease}
             // style={{
@@ -113,14 +113,14 @@ const InputContainer = ({
             //     disableButton || (+amount > 1 && +amount < 2) ? "default" : "",
             // }}
             style={{
-              opacity:
-                disableButton || +amount === MIN_AMOUNT || +amount === 0
-                  ? "0.5"
-                  : "",
-              cursor:
-                disableButton || +amount === MIN_AMOUNT || +amount === 0
-                  ? "default"
-                  : "",
+              // opacity:
+              //   disableButton || +amount === MIN_AMOUNT || +amount === 0
+              //     ? "0.5"
+              //     : "",
+              // cursor:
+              //   disableButton || +amount === MIN_AMOUNT || +amount === 0
+              //     ? "default"
+              //     : "",
             }}
           >
             1/2
@@ -128,16 +128,16 @@ const InputContainer = ({
           <button
             className="min-max-btn"
             onClick={handleDecrease}
-            disabled={disableButton || +amount <= MIN_AMOUNT}
+            // disabled={disableButton || +amount <= MIN_AMOUNT}
             style={{
-              opacity:
-                disableButton || +amount === MIN_AMOUNT || +amount === 0
-                  ? "0.5"
-                  : "",
-              cursor:
-                disableButton || +amount === MIN_AMOUNT || +amount === 0
-                  ? "default"
-                  : "",
+              // opacity:
+              //   disableButton || +amount === MIN_AMOUNT || +amount === 0
+              //     ? "0.5"
+              //     : "",
+              // cursor:
+              //   disableButton || +amount === MIN_AMOUNT || +amount === 0
+              //     ? "default"
+              //     : "",
             }}
           >
             {svgIcon.minusIcon}
@@ -183,10 +183,10 @@ const InputContainer = ({
           <button
             className="min-max-btn"
             onClick={handleIncrease}
-            disabled={disableButton || +amount >= MAX_AMOUNT}
+            // disabled={disableButton || +amount >= MAX_AMOUNT}
             style={{
-              opacity: disableButton || +amount >= MAX_AMOUNT ? "0.5" : "",
-              cursor: disableButton || +amount >= MAX_AMOUNT ? "default" : "",
+              // opacity: disableButton || +amount >= MAX_AMOUNT ? "0.5" : "",
+              // cursor: disableButton || +amount >= MAX_AMOUNT ? "default" : "",
             }}
           >
             {svgIcon.plusIcon}
@@ -195,35 +195,35 @@ const InputContainer = ({
             className="mix-max-text"
             type="button"
             onClick={handledoubleIncrease}
-            disabled={
-              disableButton ||
-              +amount >= MAX_AMOUNT ||
-              +amount >= MAX_AMOUNT / 2
-            }
+            // disabled={
+            //   disableButton ||
+            //   +amount >= MAX_AMOUNT ||
+            //   +amount >= MAX_AMOUNT / 2
+            // }
             style={{
-              opacity:
-                disableButton ||
-                  +amount >= MAX_AMOUNT ||
-                  +amount >= MAX_AMOUNT / 2
-                  ? "0.5"
-                  : "",
-              cursor:
-                disableButton ||
-                  +amount >= MAX_AMOUNT ||
-                  +amount >= MAX_AMOUNT / 2
-                  ? "default"
-                  : "",
+              // opacity:
+              //   disableButton ||
+              //     +amount >= MAX_AMOUNT ||
+              //     +amount >= MAX_AMOUNT / 2
+              //     ? "0.5"
+              //     : "",
+              // cursor:
+              //   disableButton ||
+              //     +amount >= MAX_AMOUNT ||
+              //     +amount >= MAX_AMOUNT / 2
+              //     ? "default"
+              //     : "",
             }}
           >
             2x
           </button>
           <div className="border"></div>
           <button
-            disabled={disableButton || +amount === MAX_AMOUNT}
+            // disabled={disableButton || +amount === MAX_AMOUNT}
             className="mix-max-text"
             style={{
-              opacity: disableButton || +amount === MAX_AMOUNT ? "0.5" : "",
-              cursor: disableButton || +amount === MAX_AMOUNT ? "default" : "",
+              // opacity: disableButton || +amount === MAX_AMOUNT ? "0.5" : "",
+              // cursor: disableButton || +amount === MAX_AMOUNT ? "default" : "",
             }}
             onClick={handleMaxAmount}
           >
