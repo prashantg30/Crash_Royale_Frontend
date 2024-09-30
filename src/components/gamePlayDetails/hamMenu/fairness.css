@@ -1,0 +1,138 @@
+/* AnotherModal.css */
+.modal-background {
+  position: fixed;
+  top: -8px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* /////////////////////// */
+.modal-3 {
+  position: relative;
+  background-color: var(--body-color);
+  max-width: 32%;
+  background: rgb(31, 25, 51);
+  width: 100%;
+  /* margin: 1rem 0 1rem 4rem; */
+  /* margin-top: 8rem; */
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 12px, rgba(0, 0, 0, 0.08) 0px 4px 48px;
+  border-radius: 16px;
+  /* min-height: 65vh; */
+  /* height: 100px; */
+  backface-visibility: hidden !important;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #fb6514;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #e55b10;
+}
+
+/* <-------------------------- fairness-container styling --------------------------> */
+.fairness-container {
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+.fairness-input {
+  width: 100%;
+  background-color: rgb(29, 25, 41);
+  border: 1px solid rgb(60, 53, 83);
+  border-radius: 12px;
+  position: relative;
+  margin-top: 16px;
+}
+.fairness-input label {
+  max-width: 133%;
+  position: absolute;
+  left: 0px;
+  top: -5px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 12px;
+
+  /* color: #fb6514; */
+}
+.fairness-input input {
+  width: 100%;
+  /* height: 48px; */
+  font-size: 16px;
+  font-weight: 700;
+  padding: 21px 12px 4px 12px;
+  /* color: rgb(255, 255, 255); */
+  border: none;
+  outline: none;
+  background: none;
+  border-radius: 8px;
+}
+.fairness-input input:focus {
+  color: white;
+}
+.hash-btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.hash-btn-container button {
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 16px;
+  border: 1px dashed rgb(71, 64, 96);
+  background-color: rgb(60, 53, 83) !important;
+  color: rgb(220, 218, 224);
+  /* cursor: pointer; */
+}
+
+.hash-btn-container button:nth-child(3) {
+  background-color: rgb(35, 72, 112) !important;
+}
+
+/* /////////////////////////////// responsive ////////////////////////// */
+@media (max-width: 850px) {
+  .modal-3 {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    top: 3rem;
+  }
+}
+
+@media (max-width: 850px) and (min-width: 600px) {
+  .modal-3 {
+    /* top: -3.5rem; */
+    /* border-color: #e55b10; */
+  }
+}
+
+/* @media(max-width: ) */

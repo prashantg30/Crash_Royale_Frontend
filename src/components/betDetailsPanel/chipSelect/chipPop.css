@@ -1,0 +1,28 @@
+.btn-tab {
+  cursor: pointer;
+  /* Other default styles */
+}
+
+.btn-tab.active h3 {
+  color: orange; /* Color when active */
+}
+
+.btn-tab.inactive h3 {
+  color: grey; /* Color when inactive */
+}
+
+.btn-tab-mobile {
+  border-width: 1px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  /* -webkit-box-align: center; */
+  align-items: center;
+  cursor: pointer;
+  min-width: 38px;
+  /* width: 100%; */
+  height: 100%;
+  -webkit-box-pack: center;
+  justify-content: center;
+  /* margin-top: 3rem; */
+}

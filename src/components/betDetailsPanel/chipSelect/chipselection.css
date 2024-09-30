@@ -1,0 +1,100 @@
+.chip-select-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1736;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  max-width: 300px;
+  margin: auto;
+}
+
+.insurance-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.insurance-btn {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #5c5474;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.insurance-btn.active {
+  background-color: #07932c;
+}
+
+.insurance-btn.inactive {
+  background-color: #5c5474;
+}
+
+.insurance-modal {
+  margin-left: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cashout-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c284b;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.cashout-control-btn {
+  background-color: #1a1736;
+  color: white;
+  border: 1px solid #5c5474;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.cashout-display {
+  color: white;
+  font-size: 24px;
+  margin: 0 20px;
+}
+
+.bet-multipliers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.multiplier-btn {
+  background-color: #2c284b;
+  border: 1px solid #5c5474;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.multiplier-btn.off-btn {
+  background-color: #5c5474;
+  border: none;
+}

@@ -1,0 +1,124 @@
+.tabs-container {
+  width: 95%;
+  margin: 0 auto;
+  border: 1px solid #150623;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #150623;
+}
+
+.tabs-header {
+  display: flex;
+  border: none;
+}
+
+.active {
+  color: rgb(253, 133, 58) !important;
+}
+
+.tab-button {
+  margin: 0.5rem;
+  border-radius: 8px;
+  flex: 1;
+  padding: 4px 12px;
+  cursor: pointer;
+  border: none;
+  background-color: #150623;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  background-color: rgb(31, 25, 51);
+}
+
+.scrollable-content {
+  max-height: 350px; /* Adjust height as needed */
+  overflow-y: auto;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.underImage img {
+  width: 100%;
+  max-width: 400px;
+  align-items: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.range-image img {
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  display: block;
+}
+
+.bets-btn-1 {
+  margin-top: 1rem;
+  min-height: 42px;
+  width: 100%;
+  height: auto;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid var(--secondary-color-5, #0c70db);
+  background: var(--secondary-color-6, #1f84ef);
+  -webkit-box-shadow: 0px -2.59412px 0px 0px #1a528d inset;
+  box-shadow: 0px -2.59412px 0px 0px #1a528d inset;
+  justify-content: center;
+  gap: 10px;
+  color: var(--gray-12, #f9f9f9);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .tab-button {
+    margin: 0.25rem;
+    padding: 2px 8px;
+  }
+
+  .scrollable-content {
+    max-height: 300px;
+    padding: 5px;
+  }
+
+  .underImage img {
+    margin-left: 0;
+  }
+
+  .range-image img {
+    margin-left: 0;
+  }
+
+  .bets-btn-1 {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs-header {
+    /* flex-direction: column; */
+  }
+
+  .tab-button {
+    margin: 0.1rem;
+    padding: 2px 6px;
+  }
+
+  .scrollable-content {
+    max-height: 250px;
+  }
+
+  .bets-btn-1 {
+    padding: 3px;
+    font-size: 10px;
+  }
+}

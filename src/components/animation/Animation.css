@@ -1,0 +1,42 @@
+/* Reducing progres bar  */
+.progress-container {
+    width: 100%;
+    /* background-color: #e0e0e0; */
+    border-radius: 4px;
+    overflow: hidden;
+    height: 3px;
+    position: absolute;
+    margin: 20px auto;
+    max-width: 100%;
+    bottom: 2rem;
+  }
+  .canvas{
+    height: 100% !important;
+    width: 100% !important;
+    position: absolute;
+    aspect-ratio: 16 / 9 !important;
+    /* border: 1px solid red; */
+    /* aspect-ratio: 16 / 9; */
+  }
+  .progress-bar {
+    height: 100%;
+    background-color: #3f51b5;
+    animation: reduceProgress 7s linear forwards;
+  }
+  
+  @keyframes reduceProgress {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+  @media (max-width:900px) {
+    .canvas{
+      position: static;
+    }
+    .progress-container{
+      bottom: 0;
+    }
+  }

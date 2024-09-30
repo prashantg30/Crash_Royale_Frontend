@@ -1,0 +1,399 @@
+/* /////////////////// modal-content1 ///////////////////// */
+.modal-content1 {
+  width: 100%;
+  height: 90%;
+  overflow: auto;
+  padding-top: 2rem;
+  font-size: 18px;
+}
+/* //////////////////////// howtoplay-img-container styling ////////////// */
+.howtoplay-img-container {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+.howtoplay-img-container img {
+  width: 360px;
+}
+
+.howtoplay-img-container3 {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+.howtoplay-img-container3 img {
+  width: 340px;
+}
+
+/* <--------------------------- responsive img -------------------------> */
+@media (max-width: 768px) {
+  .howtoplay-img-container img {
+    width: 57%;
+  }
+
+  .howtoplay-img-container3 img {
+    width: 56%;
+  }
+}
+
+/* /////////////////////////////// howtoplay-para styling //////////////////////// */
+
+.howtoplay-para {
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #d5d2df;
+  padding: 0 16px;
+  cursor: default;
+}
+.gameboard-para {
+  font-weight: 700;
+  color: rgb(230, 126, 35);
+  font-size: 18px;
+  padding: 0 16px;
+  cursor: default;
+}
+.howtoplay-para span {
+  font-weight: 700;
+  color: rgb(230, 126, 35);
+}
+.howtoplay-h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #d5d2df;
+  padding: 0 16px;
+}
+
+/* /////////////////////// howtoplay-para2 styling //////////////////// */
+.howtoplay-para2 {
+  font-size: 14px;
+  color: #a39eb4;
+  padding: 0 16px;
+}
+.howtoplay-para-bold {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 16px;
+  cursor: default;
+}
+.info-icon-wrapper {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.info-icon-wrapper:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+}
+
+.info-icon-wrapper:active:after {
+  width: 200%; /* Adjust the size as needed */
+  height: 200%; /* Adjust the size as needed */
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.info-icon-wrapper:hover {
+  filter: blur(0.5px);
+  opacity: 0.2;
+  border-radius: 50%;
+  /* border: 1px solid gray;
+  padding: 2px; */
+}
+
+/* //////////////////////////////// game tab styling //////////////////////// */
+
+.howtoplay-para-bold {
+  font-size: 18px;
+  color: #a39eb4;
+  padding: 0 16px;
+  color: #ee6700;
+  cursor: default;
+}
+
+/* ///////////////////////// img styling gameboard-round gameboard-imoon //////////////////// */
+.gameboard-round {
+  padding: 0 16px;
+}
+.gameboard-round img {
+  width: 140px;
+}
+
+.gameboard-imoon {
+  padding: 0 16px;
+}
+.gameboard-imoon img {
+  width: 40px;
+}
+.howtoplay-img-container2 img {
+  width: 360px;
+}
+
+/* <----------------------------- responsive img -----------------> */
+@media (max-width: 768px) {
+  .howtoplay-img-container2 img {
+    width: 57%;
+  }
+}
+
+/* <---------------------Player Action Styling ----------------------------> */
+
+.Bet-container {
+  /* padding: 1rem; */
+  margin-top: 1rem;
+}
+
+.bets-btn {
+  margin-top: 20px;
+  /* margin-left: 1rem; */
+  min-height: 42px;
+  width: 100%;
+  height: auto;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid var(--secondary-color-5, #0c70db);
+  background: var(--secondary-color-6, #1f84ef);
+  -webkit-box-shadow: 0px -2.59412px 0px 0px #1a528d inset;
+  box-shadow: 0px -2.59412px 0px 0px #1a528d inset;
+  justify-content: center;
+  gap: 10px;
+  color: var(--gray-12, #f9f9f9);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  cursor: pointer;
+}
+.bets-btn-orange {
+  margin-top: 20px;
+  /* margin-left: 1rem; */
+  min-height: 42px;
+  width: 100%;
+  height: auto;
+  padding: 7px;
+  border-radius: 5px;
+  justify-content: center;
+  gap: 10px;
+  color: var(--gray-12, #f9f9f9);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color-4-i, #fb8111);
+  background: var(--primary-color-4-i, #fb8111);
+  -webkit-box-shadow: 0px -2.71765px 0px 0px #ee6700 inset;
+  box-shadow: 0px -2.71765px 0px 0px #ee6700 inset;
+  cursor: pointer;
+}
+.bets-btn-green {
+  margin-top: 1rem;
+  /* margin-left: 1rem; */
+  min-height: 42px;
+  width: 100%;
+  height: auto;
+  padding: 7px;
+  border-radius: 5px;
+  justify-content: center;
+  gap: 10px;
+  color: var(--gray-12, #f9f9f9);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--tertiary-color-5, #0aad36);
+  background: var(--tertiary-color-5, #0aad36);
+  -webkit-box-shadow: 0px -2.71765px 0px 0px #235a11 inset;
+  box-shadow: 0px -2.71765px 0px 0px #235a11 inset;
+  cursor: pointer;
+}
+
+/* InfoCrashMax.css */
+
+.info_crash_max {
+  /* margin-top: 1rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  max-height: 38px;
+  width: 100%;
+  /* height: 100%; */
+  background: #04020b;
+  color: #a39eb4;
+  border-radius: 12px;
+  padding: 5px;
+  /* display: flex;
+  align-items: center;
+  height: 25px; */
+  /* margin: 1rem; */
+}
+
+.btn {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.color-orange {
+  color: #fb6514;
+  background-color: #04020b;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* .show-wrap {
+  display: flex;
+  align-items: center;
+} */
+
+.btn-calc {
+  width: auto;
+  padding: 2px;
+  min-width: 24px;
+  min-height: 24px;
+  background-color: black;
+  border: 1px solid #a39eb4;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  height: 25px;
+}
+
+/* .amount {
+  display: flex;
+  align-items: center;
+} */
+
+.input {
+  margin: 0 8px;
+  font-size: 16px;
+  min-width: 40px;
+  text-align: center;
+}
+
+.circle-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  border: 3px solid var(--secondary-color-7, #4ca1fb);
+}
+
+/* <------------------------------ over-under-btn styling -------------------------> */
+.over-under-btn {
+  max-width: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 10px;
+}
+.over-under-btn button {
+  height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 147%;
+  border: 1px solid #0c70db;
+  border-radius: 5px;
+  background-color: #1f84ef;
+  box-shadow: 0px -2.59412px 0px 0px #1a528d inset;
+}
+.under-btn {
+  border: 1px solid #0aad36 !important;
+  background-color: #0aad36 !important;
+  box-shadow: 0px -2.71765px 0px 0px #235a11 inset !important;
+}
+
+@media (max-width: 768px) {
+  .input {
+    min-width: 20px;
+  }
+  .btn-calc {
+    min-width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn {
+    padding: 10px;
+  }
+}
+@media (max-width: 850px) {
+  .table-info-game {
+    height: 75% !important;
+    /* border: 1px solid; */
+  }
+}
+
+.table-info-game {
+  margin: auto;
+  max-width: 390px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #ee6700;
+  background-color: #2c263e;
+  width: 100%;
+  margin-top: 3rem;
+  height: 85%;
+}
+
+.table-info-game thead tr {
+  background-color: #2c263e;
+  text-align: center;
+}
+
+.table-info-game thead th {
+  color: #a39eb4;
+  border: none;
+  margin-top: 1rem;
+}
+
+.table-info-game tbody td {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.table-info-game tbody tr:nth-of-type(odd) {
+  background-color: #282439;
+}
+
+.usdi-btn {
+  background-color: rgb(253, 176, 34);
+  text-align: left;
+  border: none;
+  border-radius: 26px;
+  font-size: 8px;
+  font-weight: 700;
+  padding: 0 2px;
+  margin-right: 10px;
+}

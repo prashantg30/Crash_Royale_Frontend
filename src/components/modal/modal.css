@@ -1,0 +1,311 @@
+.overlay {
+  position: fixed;
+  top: -65px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000 !important;
+  padding-bottom: 8px;
+}
+.modal {
+  position: relative;
+  max-width: 390px;
+  background: rgb(31, 25, 51);
+  width: 100%;
+  /* height: auto; */
+  height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 12px, rgba(0, 0, 0, 0.08) 0px 4px 48px;
+  border-radius: 16px;
+  backface-visibility: hidden !important;
+}
+.modal-2 {
+  position: relative;
+  background-color: var(--body-color);
+  max-width: 30%;
+  background: rgb(31, 25, 51);
+  width: 100%;
+  /* margin: 3rem 0 1rem 0; */
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 12px, rgba(0, 0, 0, 0.08) 0px 4px 48px;
+  border-radius: 16px;
+  height: 500px;
+  backface-visibility: hidden !important;
+}
+.modal-header {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.cross-icon-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+.cross-icon {
+  border: 1px solid var(--border-bg-color);
+  border-radius: 8px;
+  padding: 4px 10px 4px 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.round-btn-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.round-tab-container {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 8px;
+  max-width: 230px;
+  width: 100%;
+  height: 58px;
+  background: var(--body-color);
+  border-radius: 12px;
+  border: 1px solid rgb(70, 62, 94);
+  padding: 0.5rem;
+}
+.round-tab-container p {
+  font-size: 12px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.round-tab {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 1rem 0 1rem;
+  color: white;
+  background: #332c4a;
+  border-radius: 6px;
+  height: 38px;
+  width: 100%;
+  cursor: pointer;
+}
+.active-round-tab {
+  background-color: var(--bet-btn-bg-color);
+}
+.modal-content-1 {
+  /* height: 400px; */
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  margin: 1rem auto;
+  height: 215px;
+  overflow-y: scroll;
+  margin: 1rem auto;
+  height: 350px;
+  overflow-y: auto;
+}
+.multi-value-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: wrap;
+  gap: 12px;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.multi-value-tab {
+  background-color: var(--bet-btn-bg-color);
+  width: 56px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--btn-text-color);
+  padding: 4px 0 4px 0;
+  cursor: pointer;
+  /* height: 20px; */
+}
+
+/* ////////////////////////// under-date-container styling ////////////////////// */
+.under-date-container {
+  margin: 0rem 1rem 1rem 1rem;
+  background-color: rgb(51, 44, 74);
+  border: 1px solid rgb(70, 62, 94);
+  border-radius: 8px;
+  padding-bottom: 8px;
+}
+.under-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(70, 62, 94);
+  background-color: rgb(51, 44, 74);
+  height: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 8px 8px 0px 0px;
+}
+.under-h2 {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+}
+.under-p1 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 116%;
+  color: rgb(255, 255, 255);
+}
+
+/* <---------------- bet-over ----------> */
+.bet-over {
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 8px;
+}
+.bet-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.bet-1 p {
+  font-weight: 400;
+  line-height: 116%;
+  color: rgb(116, 109, 137);
+  font-size: 14px;
+  text-align: center;
+}
+
+.bet-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  text-align: center;
+}
+.bet-2 p {
+  line-height: 116%;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  text-align: center;
+}
+
+.usd-btn {
+  width: 100%;
+  padding: 5.6px 16px 8px;
+}
+
+.usd-btn button {
+  width: 100%;
+  padding: 13px 0px;
+
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 147%;
+  color: rgb(42, 36, 58);
+  cursor: pointer;
+}
+
+/* <---------- md-container -----------> */
+.md-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 16px;
+}
+.md-container button {
+  width: 48%;
+  border: none;
+  border: 1px solid rgb(70, 62, 94);
+  color: rgb(12, 112, 219);
+  line-height: 1rem;
+  height: 48px;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 12px;
+  background: none;
+  cursor: pointer;
+}
+.md-container button:first-child:hover {
+  background-color: rgba(12, 112, 219, 0.08);
+  border: 1px solid rgb(12, 112, 219);
+}
+.md-container button:last-child:hover {
+  background-color: rgba(251, 101, 20, 0.08);
+  border: 1px solid rgb(251, 101, 20);
+}
+
+/* /////////////////////////////// responsive ////////////////////////// */
+@media (max-width: 768px) {
+  .modal-2 {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    margin-top: 10rem;
+  }
+  .modal-header {
+    border-radius: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .model {
+    overflow: auto;
+    height: 100%;
+    top: 4rem;
+  }
+}
+@media (max-width: 850px) and (min-width: 600px) {
+  .modal {
+    top: 0.5rem;
+
+    /* background-color: aqua; */
+    /* max-width: none; */
+    /* width: auto; */
+  }
+}
+
+@media (max-height: 650px) and (max-width: 850px) {
+  .modal {
+    top: 4rem;
+    height: 100%;
+    min-width: 100%;
+  }
+}
+
+@media (max-height: 600px) and (min-width: 850px) {
+  .modal {
+    top: 4rem;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 850px) {
+  .overlay {
+    position: fixed;
+    top: -41px;
+    left: -180px;
+    width: 130%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000 !important;
+    padding-bottom: 8px;
+  }
+}
