@@ -10,7 +10,8 @@ const ChipSelectbutton = ({
   nextRound,
   betData,
   autoMultiplier,
-  disableButton
+  disableButton,
+  fromValueRange
 }) => {
   const [lastClickedValue, setLastClickedValue] = useState(null);
   const [autoModal, setAutoModal] = useState(false); // Use boolean for active state
@@ -91,8 +92,8 @@ const ChipSelectbutton = ({
           }}
           disabled={
             (planeStatus === "0" && betData?.length > 0) ||
-            (planeStatus === "1" && betData?.length > 0) ||
-            nextRound[0] || (autoMultiplier == 0 || isNaN(autoMultiplier))
+            (planeStatus === "1" && betData?.length > 0)
+            //  ||  (autoMultiplier == 0 || isNaN(autoMultiplier))
           }
           key={i}
           className="btn-tab"

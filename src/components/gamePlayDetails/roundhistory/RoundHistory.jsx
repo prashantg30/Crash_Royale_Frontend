@@ -4,10 +4,12 @@ import RoundModal from "../roundhistory/RoundModel";
 const RoundHistory = ({ maxOdds, planeStatus }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedOdd, setSelectedOdd] = useState(null);
+  const [selectedButton, setSelectedButton] = useState("");
 
-  const handleClick = (el) => {
+  const handleClick = (el, buttonClickedType) => {
     setSelectedOdd(el);
     setIsModalOpen(true);
+    setSelectedButton(buttonClickedType);
   };
 
   const closeModal = () => {
@@ -39,7 +41,7 @@ const RoundHistory = ({ maxOdds, planeStatus }) => {
                 fontSize: "12px",
                 boxShadow: "-5px 0px 10px rgba(0, 0, 0, 0.2)",
               }}
-              onClick={() => handleClick(maxOdds[0])}
+              onClick={() => handleClick(maxOdds[0], "MD5")}
             >
               MD5
             </div>
@@ -56,7 +58,7 @@ const RoundHistory = ({ maxOdds, planeStatus }) => {
                   fontWeight: "600",
                   boxShadow: "-5px 0px 10px rgba(0, 0, 0, 0.2)",
                 }}
-                onClick={() => handleClick(el)}
+                onClick={() => handleClick(el, "")}
               >
                 {el?.max_mult + "x"}
               </div>
@@ -65,7 +67,11 @@ const RoundHistory = ({ maxOdds, planeStatus }) => {
       </div>
 
       {isModalOpen && (
-        <RoundModal onClose={closeModal} selectedOdd={selectedOdd} />
+        <RoundModal
+          onClose={closeModal}
+          selectedOdd={selectedOdd}
+          selectedButton={selectedButton}
+        />
       )}
     </div>
   );

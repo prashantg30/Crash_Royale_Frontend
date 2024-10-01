@@ -9,7 +9,7 @@ const AutoCashout = ({
   setAutoMultiplier,
 }) => {
   useEffect(() => {
-    setAutoMultiplier("2.00"); 
+    setAutoMultiplier("2.00");
   }, [setAutoMultiplier]);
 
   const handleIncrease = () => {
@@ -24,11 +24,11 @@ const AutoCashout = ({
       if (isNaN(integerPart)) integerPart = 0;
       if (isNaN(decimalPart)) decimalPart = 0;
 
-      if (decimalPart >= 9) {
+      if (decimalPart >= 90) {
         integerPart += 1;
         decimalPart = 0;
       } else {
-        decimalPart += 1;
+        decimalPart += 10;
       }
 
       return `${integerPart}.${decimalPart.toString().padStart(2, "0")}`;
@@ -50,25 +50,21 @@ const AutoCashout = ({
       if (decimalPart <= 0) {
         if (integerPart > 1) {
           integerPart -= 1;
-          decimalPart = 9;
+          decimalPart = 90;
         }
       } else {
-        decimalPart -= 1;
+        decimalPart -= 10;
       }
 
       const newValue = Math.max(integerPart + decimalPart / 100, 1.01);
 
       return `${Math.floor(newValue)}.${Math.round((newValue % 1) * 100)
         .toString()
-        .padStart(1, "0")}`;
+        .padStart(2, "0")}`;
     });
   };
 
-  const handleMultiplierClick = (multiplier) => {
-    if (autoCash) {
-      setAutoMultiplier(multiplier);
-    }
-  };
+
 
   const handleAutoCashMultiplier = (event) => {
     let inputValue = event.target.value;
@@ -92,6 +88,12 @@ const AutoCashout = ({
   const handleFocus = () => {
     if (!autoMultiplier) {
       setAutoMultiplier("1.01");
+    }
+  };
+
+    const handleMultiplierClick = (multiplier) => {
+    if (autoCash) {
+      setAutoMultiplier(multiplier);
     }
   };
 

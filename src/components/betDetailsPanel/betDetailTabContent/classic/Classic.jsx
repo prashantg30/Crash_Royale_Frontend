@@ -32,10 +32,8 @@ const Classic = ({
   betData,
   cashoutData,
 }) => {
-  // Ensure autoMultiplier is handled safely
   const isAutoMultiplierEmpty = !autoMultiplier || autoMultiplier === "";
 
-  // Combine disableButton logic to include isAutoMultiplierEmpty
   const isButtonDisabled = disableButton || isAutoMultiplierEmpty;
 
   return (

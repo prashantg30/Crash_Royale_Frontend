@@ -83,7 +83,7 @@
   justify-content: end;
   margin-top: 1rem;
   gap: 0.5rem;
-  width: 50%;
+  /* width: 50%; */
 }
 .round-button button {
   display: inline-flex;

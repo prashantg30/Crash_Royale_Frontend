@@ -349,6 +349,8 @@ const BetDetails = ({ info, planeData, amount, setAmount, queryParams }) => {
                         endDelay={endDelay}
                         handlePlaceBet={handlePlaceBet}
                         setAmount={setAmount}
+                        autoMultiplier={autoMultiplier}
+
                         info={info} />)
 
                 }

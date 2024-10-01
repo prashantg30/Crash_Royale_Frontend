@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../../betDetails.css";
 import InputContainer from "../../inputContainer/InputContainer";
 import ChipSelectbutton from "../../chipSelect/ChipSelectbutton";
@@ -8,6 +8,7 @@ import InputContainerMobile from "../../inputContainer/InputContainerMobile";
 import CrashPointMobile from "./CrashPointMobile";
 import InsuranceMobile from "../../chipSelect/InsuranceMobile";
 import OverUnderBetButtonMobile from "./OverUnderBetButtonMobile";
+
 const OverUnder = ({
   info,
   handlePlaceBet,
@@ -15,7 +16,8 @@ const OverUnder = ({
   endDelay,
   cashoutShow,
   showCancel,
-  nextRound,cashoutData,
+  nextRound,
+  cashoutData,
   betData,
   disableButton,
   setCalcValue,
@@ -28,12 +30,12 @@ const OverUnder = ({
   handleNextClick,
   setAmount,
 }) => {
-  console.log(overUnderResult)
+  // Determine whether the buttons should be disabled
+  const isButtonDisabled = disableButton || calcValue <= 0; // example condition
   
-
   return (
     <>
-
+      {/* Desktop Version */}
       <div className="place-bet-content">
         <InputContainer
           amount={amount}
@@ -45,7 +47,7 @@ const OverUnder = ({
           endDelay={endDelay}
           planeStatus={planeStatus}
           showCancel={showCancel}
-          disableButton={disableButton}
+          disableButton={isButtonDisabled}
         />
         <ChipSelectbutton
           amount={amount}
@@ -54,8 +56,8 @@ const OverUnder = ({
           betData={betData}
           nextRound={nextRound}
           planeStatus={planeStatus}
-          disableButton={disableButton}
-
+          disableButton={isButtonDisabled}
+          
         />
         <OverUnderBetButton
           showCancel={showCancel}
@@ -65,7 +67,7 @@ const OverUnder = ({
           planeStatus={planeStatus}
           endDelay={endDelay}
           cashoutData={cashoutData}
-          disableButton={disableButton}
+          disableButton={isButtonDisabled} // Disable button logic
           handleCashout={handleCashout}
           cashoutShow={cashoutShow}
           handleNextClick={handleNextClick}
@@ -73,8 +75,8 @@ const OverUnder = ({
           nextRound={nextRound}
           overUnderResult={overUnderResult}
           calcValue={calcValue}
+          className={isButtonDisabled ? 'disabled-button' : ''} // Apply the disabled class
         />
-
         <CrashPoint
           planeMutiplier={planeMutiplier}
           setCalcValue={setCalcValue}
@@ -84,13 +86,13 @@ const OverUnder = ({
           planeStatus={planeStatus}
           handleCashout={handleCashout}
           nextRound={nextRound}
-          disableButton={disableButton}
-
+          disableButton={isButtonDisabled}
         />
       </div>
 
+      {/* Mobile Version */}
       <div className="place-bet-content-mobile">
-        <div className="" style={{ width: "28%" }}>
+        <div style={{ width: "28%" }}>
           <InputContainerMobile
             amount={amount}
             setAmount={setAmount}
@@ -101,12 +103,13 @@ const OverUnder = ({
             endDelay={endDelay}
             planeStatus={planeStatus}
             showCancel={showCancel}
+            disableButton={isButtonDisabled}
           />
         </div>
-        <div className="" style={{}}>
+        <div>
           <InsuranceMobile />
         </div>
-        <div className="" style={{ width: "32%" }}>
+        <div style={{ width: "32%" }}>
           <CrashPointMobile
             planeMutiplier={planeMutiplier}
             setCalcValue={setCalcValue}
@@ -116,9 +119,10 @@ const OverUnder = ({
             planeStatus={planeStatus}
             handleCashout={handleCashout}
             nextRound={nextRound}
+            disableButton={isButtonDisabled}
           />
         </div>
-        <div className="" style={{ width: "40%" }}>
+        <div style={{ width: "40%" }}>
           <OverUnderBetButtonMobile
             showCancel={showCancel}
             betData={betData}
@@ -134,12 +138,10 @@ const OverUnder = ({
             nextRound={nextRound}
             overUnderResult={overUnderResult}
             calcValue={calcValue}
+            className={isButtonDisabled ? 'disabled-button' : ''} // Apply the disabled class for mobile
           />
-
         </div>
       </div>
-
-
     </>
   );
 };
